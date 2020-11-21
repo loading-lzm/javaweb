@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转页面</title>
+</head>
+<body>
+<p>这是web下的index.html页面</p><br/>
+<a href="a/b/c.html">跳到c页面</a>
+<a href="http://localhost:8080/07_servlet/cforward">跳到c页面</a>
+<!--    /   被浏览器解析 得到地址为 http://ip:port/-->
+<!--    /   在服务器中解析 得到地址为 http://ip:port/工程路径-->
+<!--
+    特殊情况    response.sendRediect"/";
+    把斜杠发送给浏览器解析 得到 http://ip:port/
+-->
+<a href="/">斜杠</a>
+</body>
+</html>
