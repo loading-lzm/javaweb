@@ -21,4 +21,11 @@ public class UserDaoImpl extends BaseDao implements UserDao {
         String sql = "insert into t_user(`username`,`password`,`email`) values(?,?,?)";
         return update(sql, user.getUsername(), user.getPassword(), user.getEmail());
     }
+
+    @Override
+    public int changePassword(User user, String password) {
+        String sql = "update t_user set password = ? where username= ? ";
+        //String sql = "insert into t_user(`username`,`password`,`email`) values(?,?,?)";
+        return update(sql, password, user.getUsername());
+    }
 }

@@ -13,7 +13,7 @@ public class UserServiceTest {
 
     @Test
     public void registUser() {
-        userService.registUser(new User(null,"lzm123","666666","123@pp.com"));
+        userService.registUser(new User(null,"lzm1234","666666","123@pp.com"));
     }
 
     @Test

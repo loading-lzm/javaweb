@@ -28,4 +28,14 @@ public class UserServiceImpl implements UserService {
         //查到了返回true
         return true;
     }
+
+    @Override
+    public boolean changePassword(String username,String password,String oldpassword){
+        User user = userDao.queryUserByUsernameAndPassword(username,oldpassword);
+        if(user!=null){
+            userDao.changePassword(user,password);
+            return true;
+        }
+        return false;
+    }
 }

@@ -22,4 +22,11 @@ public interface UserService {
      */
     public boolean existsUsername(String username);
 
+    /**
+     * 用户修改密码
+     * @param
+     * @return
+     */
+    public boolean changePassword(String username,String password,String oldpassword);
+
 }
