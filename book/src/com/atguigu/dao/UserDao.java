@@ -30,8 +30,9 @@ public interface UserDao {
 
     /**
      * 修改密码
+     *
      * @param
      * @return
      */
-    public int changePassword(User user,String password);
+    public int changeUserPassword(User user, String password);
 }
