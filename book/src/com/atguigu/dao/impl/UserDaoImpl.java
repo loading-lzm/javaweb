@@ -3,6 +3,8 @@ package com.atguigu.dao.impl;
 import com.atguigu.dao.UserDao;
 import com.atguigu.pojo.User;
 
+import java.util.List;
+
 public class UserDaoImpl extends BaseDao implements UserDao {
     @Override
     public User queryUserByUsername(String username) {
@@ -27,5 +29,11 @@ public class UserDaoImpl extends BaseDao implements UserDao {
         String sql = "update t_user set password = ? where username= ? ";
         //String sql = "insert into t_user(`username`,`password`,`email`) values(?,?,?)";
         return update(sql, password, user.getUsername());
+    }
+
+    @Override
+    public List<User> selectAll() {
+        String sql = "SELECT * FROM t_user";
+        return queryForList(User.class, sql);
     }
 }

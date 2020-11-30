@@ -2,6 +2,8 @@ package com.atguigu.dao;
 
 import com.atguigu.pojo.User;
 
+import java.util.List;
+
 public interface UserDao {
     /**
      * 根据用户名查询用户信息
@@ -35,4 +37,13 @@ public interface UserDao {
      * @return
      */
     public int changeUserPassword(User user, String password);
+
+    /**
+     * 返回所有的用户
+     *
+     * @return
+     */
+    public List<User> selectAll();
+
+    //public List<User> selectAll();
 }

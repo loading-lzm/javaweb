@@ -5,6 +5,8 @@ import com.atguigu.dao.impl.UserDaoImpl;
 import com.atguigu.pojo.User;
 import com.atguigu.service.UserService;
 
+import java.util.ArrayList;
+
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao = new UserDaoImpl();
@@ -30,12 +32,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean changePassword(String username,String password,String oldpassword){
-        User user = userDao.queryUserByUsernameAndPassword(username,oldpassword);
-        if(user!=null){
-            userDao.changePassword(user,password);
+    public boolean changePassword(String username, String password, String oldpassword) {
+        User user = userDao.queryUserByUsernameAndPassword(username, oldpassword);
+        if (user != null) {
+            userDao.changeUserPassword(user, password);
             return true;
         }
         return false;
+    }
+
+    @Override
+    public ArrayList<User> selectAll() {
+        ArrayList<User> users = (ArrayList<User>) userDao.selectAll();
+        return users;
     }
 }

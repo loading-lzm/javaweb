@@ -5,8 +5,6 @@ import com.atguigu.dao.impl.UserDaoImpl;
 import com.atguigu.pojo.User;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class UserDaoTest {
     UserDao userDao = new UserDaoImpl();
 
@@ -31,5 +29,10 @@ public class UserDaoTest {
     @Test
     public void saveUser() {
         System.out.println(userDao.saveUser(new User(null, "wzg168", "123456", "wzg168@qq.com")));
+    }
+
+    @Test
+    public void selectAll() {
+        System.out.println(userDao.selectAll());
     }
 }

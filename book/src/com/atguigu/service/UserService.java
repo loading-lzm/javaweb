@@ -2,9 +2,12 @@ package com.atguigu.service;
 
 import com.atguigu.pojo.User;
 
+import java.util.ArrayList;
+
 public interface UserService {
     /**
      * 注册用户
+     *
      * @param user
      */
     public void registUser(User user);
@@ -24,9 +27,17 @@ public interface UserService {
 
     /**
      * 用户修改密码
+     *
      * @param
      * @return
      */
-    public boolean changePassword(String username,String password,String oldpassword);
+    public boolean changePassword(String username, String password, String oldpassword);
+
+    /**
+     * 查找所有用户
+     *
+     * @return
+     */
+    public ArrayList<User> selectAll();
 
 }
