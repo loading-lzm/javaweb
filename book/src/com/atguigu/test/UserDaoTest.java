@@ -17,6 +17,7 @@ public class UserDaoTest {
             System.out.println("用户名已存在！");
         }
     }
+    /ceshi
 
     @Test
     public void queryUserByUsernameAndPassword() {
