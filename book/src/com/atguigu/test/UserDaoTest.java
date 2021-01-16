@@ -6,6 +6,7 @@ import com.atguigu.pojo.User;
 import org.junit.Test;
 
 public class UserDaoTest {
+    //测试更改
     UserDao userDao = new UserDaoImpl();
 
     @Test
