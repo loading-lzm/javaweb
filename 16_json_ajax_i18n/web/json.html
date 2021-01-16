@@ -7,24 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Insert title here</title>
     <script type="text/javascript">
-        // json的定义
-        var jsonObj = {
-            "key1": 12,
-            "key2": "abc",
-            "key3": true,
-            "key4": [11, "arr", false],
-            "key5": {
-                "key5_1": 551,
-                "key5_2": "key5_2_value"
-            },
-            "key6": [{
-                "key6_1_1": 6611,
-                "key6_1_2": "key6_1_2_value"
-            }, {
-                "key6_2_1": 6621,
-                "key6_2_2": "key6_2_2_value"
-            }]
-        };
+        // // json的定义
+        // var jsonObj = {
+        //     "key1": 12,
+        //     "key2": "abc",
+        //     "key3": true,
+        //     "key4": [11, "arr", false],
+        //     "key5": {
+        //         "key5_1": 551,
+        //         "key5_2": "key5_2_value"
+        //     },
+        //     "key6": [{
+        //         "key6_1_1": 6611,
+        //         "key6_1_2": "key6_1_2_value"
+        //     }, {
+        //         "key6_2_1": 6621,
+        //         "key6_2_2": "key6_2_2_value"
+        //     }]
+        // };
 
         // alert(typeof(jsonObj));// object  json就是一个对象
         // alert(jsonObj.key1); //12
@@ -47,19 +47,52 @@
         // alert(jsonObj);
 
         // 把json对象转换成为 json字符串
-        var jsonObjString = JSON.stringify(jsonObj); // 特别像 Java中对象的toString
-        alert(jsonObjString)
-        // 把json字符串。转换成为json对象
-        var jsonObj2 = JSON.parse(jsonObjString);
-        alert(jsonObj2.key1);// 12
-        alert(jsonObj2.key2);// abc
+        // var jsonObjString = JSON.stringify(jsonObj); // 特别像 Java中对象的toString
+        // alert(jsonObjString)
+        // // 把json字符串。转换成为json对象
+        // var jsonObj2 = JSON.parse(jsonObjString);
+        // alert(jsonObj2.key1);// 12
+        // alert(jsonObj2.key2);// abc
 
         // json的访问
         // json对象转字符串
         // json字符串转json对象
     </script>
 </head>
-<body>
+<style>
+    nav {
+        list-style: none;
 
+    }
+
+    li {
+        text-align: center;
+        /*margin-left: 20px;*/
+        float: left;
+        line-height: 40px;
+        height: 40px;
+        width: 60px;
+        border: 1px black solid;
+        background-color: slategray;
+    }
+
+    li:hover {
+        background-color: aquamarine;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+<body>
+<nav>
+    <li><a href="">你好</a></li>
+    <li><a href="">你好</a></li>
+    <li><a href="">你好</a></li>
+    <li><a href="">你好</a></li>
+    <li><a href="">你好</a></li>
+    <li><a href="">你好</a></li>
+</nav>
 </body>
 </html>
